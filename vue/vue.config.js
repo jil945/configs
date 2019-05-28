@@ -1,9 +1,9 @@
 // require("./check-versions")();
 
-// const path = require("path");
-// function resolve(...dir) {
-//     return path.resolve(...dir);
-// }
+const path = require("path");
+function resolve(...dir) {
+    return path.resolve(...dir);
+}
 
 const isProduction = process.env.NODE_ENV === "production";
 
