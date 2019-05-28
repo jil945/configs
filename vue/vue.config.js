@@ -1,9 +1,9 @@
-require("./check-versions")();
+// require("./check-versions")();
 
-const path = require("path");
-function resolve(...dir) {
-    return path.resolve(...dir);
-}
+// const path = require("path");
+// function resolve(...dir) {
+//     return path.resolve(...dir);
+// }
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -32,13 +32,9 @@ module.exports = {
     // See https://cli.vuejs.org/config/#chainwebpack
     chainWebpack: config => {
         // Turn off devtool when in production
-        if (isProduction && process.env.VUE_APP_ENV === "production") {
+        if (isProduction) {
             config.devtool(false);
         }
-
-        // Resolve alias
-        config.resolve.alias
-            .set("@", resolve("src"));
 
         // Preserve whitespaces in .vue files
         // See https://stackoverflow.com/questions/51304187/spaces-are-gone-in-html-after-upgrading-to-vue-cli-3
