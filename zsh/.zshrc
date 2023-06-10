@@ -10,3 +10,6 @@ alias pip-uninstall-all="pip freeze | xargs pip uninstall -y"
 
 alias docker-stop="docker stop \$(docker ps -aq)"
 alias docker-rm="docker rm \$(docker ps -aq)"
+
+# Load bash completion functions
+autoload -Uz bashcompinit && bashcompinit
